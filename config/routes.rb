@@ -6,5 +6,5 @@ get "/monst", to: "home#monstindex"
 
 get "/monstrandom", to: "home#random" 
 
-get "/mobs#:id", to: "home#mobshow"
+get "/mobs/:id", to: "home#mobshow"
 end
