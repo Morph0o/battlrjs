@@ -9,6 +9,14 @@ class HomeController < ApplicationController
     render json: Monst.all.to_json({:include => [:moves]})
 end
 
-deff random
+def random
+  monst = Monst.all
+  render json: monst.sample.to_json({:include => [:moves]})
+end
+
+def mobshow
+ render json: Mob.find(params[:id]).to_json({:include => [:moves]})
+end
+
 
 end
